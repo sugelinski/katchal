@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Manager - Sistema de Estacionamento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- TELA DE LOGIN -->
+        <div id="loginScreen" class="screen active">
+            <div class="login-container">
+                <div class="login-box">
+                    <div class="login-header">
+                        <i class="fas fa-parking"></i>
+                        <h1>Parking Manager</h1>
+                        <p>Sistema de Estacionamento</p>
+                    </div>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Usuário</label>
+                            <input type="text" id="username" placeholder="Digite seu usuário" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Senha</label>
+                            <input type="password" id="password" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn-login">
+                            <i class="fas fa-sign-in-alt"></i> Entrar
+                        </button>
+                    </form>
+                    <div class="login-footer">
+                        <span>👤 admin / admin123</span>
+                        <span>👤 user / user123</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DASHBOARD PRINCIPAL -->
+        <div id="dashboardScreen" class="screen">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <i class="fas fa-parking"></i>
+                    <span>Parking Manager</span>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-item active" data-section="dashboard">
+                        <i class="fas fa-chart-pie"></i> Dashboard
+                    </button>
+                    <button class="nav-item" data-section="clients">
+                        <i class="fas fa-users"></i> Clientes
+                    </button>
+                    <button class="nav-item" data-section="vehicles">
+                        <i class="fas fa-car"></i> Veículos
+                    </button>
+                    <button class="nav-item" data-section="parking">
+                        <i class="fas fa-parking"></i> Estacionamento
+                    </button>
+                    <button class="nav-item" data-section="reports">
+                        <i class="fas fa-file-alt"></i> Relatórios
+                    </button>
+                </div>
+                <div class="nav-user">
+                    <span id="userName">Admin</span>
+                    <button id="logoutBtn" class="btn-logout" title="Sair">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <main class="main-content">
+                <div id="contentArea"></div>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODAL GENÉRICO -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Título</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/clients.js"></script>
+    <script src="js/vehicles.js"></script>
+    <script src="js/parking.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "name": "Administrador",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user123",
+      "name": "Usuário Comum",
+      "role": "user"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "cpf": "123.456.789-00",
+      "rg": "12.345.678-9",
+      "phone": "(11) 99999-9999",
+      "email": "joao@email.com",
+      "address": "Rua A, 123 - São Paulo/SP",
+      "birth_date": "1980-01-01"
+    },
+    {
+      "id": 2,
+      "name": "Maria Oliveira",
+      "cpf": "987.654.321-00",
+      "rg": "98.765.432-1",
+      "phone": "(11) 98888-8888",
+      "email": "maria@email.com",
+      "address": "Rua B, 456 - Rio de Janeiro/RJ",
+      "birth_date": "1990-05-15"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "plate": "ABC-1234",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "color": "Prata",
+      "year": 2020,
+      "size": "Médio",
+      "type": "Carro",
+      "client_id": 1
+    },
+    {
+      "id": 2,
+      "plate": "XYZ-5678",
+      "brand": "Honda",
+      "model": "Civic",
+      "color": "Preto",
+      "year": 2021,
+      "size": "Médio",
+      "type": "Carro",
+      "client_id": 2
+    }
+  ],
+  "parking_spots": [
+    {"id": 1, "number": "A1", "type": "Normal", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 2, "number": "A2", "type": "Normal", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 3, "number": "A3", "type": "Normal", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 4, "number": "A4", "type": "Normal", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 5, "number": "A5", "type": "Preferencial", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 6, "number": "A6", "type": "Preferencial", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 7, "number": "A7", "type": "VIP", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 8, "number": "A8", "type": "VIP", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 9, "number": "B1", "type": "Normal", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 10, "number": "B2", "type": "Normal", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 11, "number": "B3", "type": "Carga/Descarga", "status": "Livre", "vehicle_id": null, "entry_time": null},
+    {"id": 12, "number": "B4", "type": "Carga/Descarga", "status": "Livre", "vehicle_id": null, "entry_time": null}
+  ],
+  "parking_records": [
+    {
+      "id": 1,
+      "vehicle_id": 1,
+      "spot_id": 1,
+      "client_id": 1,
+      "entry_time": "2026-07-03 08:00:00",
+      "exit_time": "2026-07-03 10:30:00",
+      "duration_minutes": 150,
+      "amount": 12.50,
+      "payment_status": "Pago",
+      "payment_method": "Dinheiro"
+    }
+  ],
+  "prices": [
+    {"id": 1, "vehicle_type": "Carro", "price_per_hour": 5.00, "daily_rate": 30.00, "monthly_rate": 500.00, "annual_rate": 5000.00},
+    {"id": 2, "vehicle_type": "Moto", "price_per_hour": 3.00, "daily_rate": 20.00, "monthly_rate": 300.00, "annual_rate": 3000.00},
+    {"id": 3, "vehicle_type": "Caminhão", "price_per_hour": 10.00, "daily_rate": 60.00, "monthly_rate": 1000.00, "annual_rate": 10000.00},
+    {"id": 4, "vehicle_type": "Van", "price_per_hour": 8.00, "daily_rate": 45.00, "monthly_rate": 800.00, "annual_rate": 8000.00},
+    {"id": 5, "vehicle_type": "SUV", "price_per_hour": 6.00, "daily_rate": 35.00, "monthly_rate": 600.00, "annual_rate": 6000.00}
+  ],
+  "_nextId": {
+    "users": 3,
+    "clients": 3,
+    "vehicles": 3,
+    "parking_spots": 13,
+    "parking_records": 2,
+    "prices": 6
+  }
+}
